@@ -1,0 +1,181 @@
+.ec-section {
+  background: var(--navy-deep);
+  position: relative;
+}
+
+.ec-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ec-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.ec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+.ec-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-base);
+}
+
+.ec-card:hover {
+  transform: translateY(-6px);
+}
+
+.ec-img-wrap {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  overflow: hidden;
+}
+
+.ec-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.ec-card:hover .ec-img-wrap img {
+  transform: scale(1.05);
+}
+
+.ec-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(2, 12, 27, 0.85) 0%, transparent 60%);
+}
+
+.ec-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: var(--font-label);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--gold-primary);
+  background: rgba(1, 8, 18, 0.85);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.ec-info {
+  margin: -3rem 0.75rem 0;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 5;
+  transition: border-color var(--transition-base);
+}
+
+.ec-card:hover .ec-info {
+  border-color: rgba(201, 168, 76, 0.25);
+}
+
+.ec-role {
+  font-family: var(--font-label);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ec-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  transition: color var(--transition-fast);
+}
+
+.ec-card:hover .ec-name {
+  color: var(--gold-primary);
+}
+
+.ec-portfolio {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--white-50);
+  line-height: 1.6;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.ec-cta {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.ec-btn {
+  padding: 1rem 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .ec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .ec-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom Text-Only Card Styles */
+.ec-card.no-image {
+  height: 100%;
+}
+
+.ec-text-card {
+  margin: 0 !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  min-height: 220px;
+  position: relative;
+}
+
+.ec-badge-inline {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: var(--font-label);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--gold-primary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+

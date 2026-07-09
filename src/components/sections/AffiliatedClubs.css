@@ -1,0 +1,101 @@
+.affiliated-section {
+  background: var(--navy-mid);
+  position: relative;
+  overflow: hidden;
+}
+
+.affiliated-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.affiliated-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.affiliated-sub {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--white-50);
+}
+
+.affiliated-marquee-wrap {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.affiliated-marquee {
+  display: flex;
+  gap: 1.5rem;
+  white-space: nowrap;
+  animation: marquee 35s linear infinite;
+}
+
+.affiliated-marquee-wrap.reverse .affiliated-marquee {
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.affiliated-marquee:hover {
+  animation-play-state: paused;
+}
+
+.club-marquee-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 2rem;
+  border-radius: var(--radius-xl);
+  min-width: 280px;
+  cursor: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.club-marquee-card:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.club-icon {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.2));
+}
+
+.club-details h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.club-details p {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--white-50);
+  margin-top: 0.2rem;
+}
+
+.affiliated-cta {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}

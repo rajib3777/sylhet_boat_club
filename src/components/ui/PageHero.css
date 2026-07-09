@@ -1,0 +1,58 @@
+.page-hero {
+  position: relative;
+  height: 55dvh;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transform: scale(1.03);
+  animation: pageHeroZoom 6s ease forwards;
+}
+
+@keyframes pageHeroZoom {
+  to { transform: scale(1); }
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(1, 8, 18, 0.4) 0%, rgba(1, 8, 18, 0.95) 100%);
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 5;
+  padding-top: 6rem;
+}
+
+.page-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.page-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  color: var(--white-70);
+  max-width: 600px;
+  line-height: 1.6;
+}

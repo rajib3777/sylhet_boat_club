@@ -1,0 +1,97 @@
+.notice-ticker {
+  position: relative;
+  background: rgba(1, 8, 18, 0.95);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.ticker-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold-primary);
+  color: var(--navy-deep);
+  padding: 0 1.25rem;
+  height: 100%;
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ticker-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--navy-deep);
+  animation: ping 1.5s ease-in-out infinite;
+}
+
+.ticker-scroll-wrap {
+  flex: 1;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 50s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--white-70);
+}
+
+.ticker-en {
+  color: var(--white-90);
+}
+
+.ticker-bn {
+  color: var(--white-60);
+}
+
+.ticker-sep {
+  color: var(--gold-primary);
+  font-size: 0.5rem;
+  opacity: 0.5;
+}
+
+.ticker-cta {
+  flex-shrink: 0;
+  padding: 0 1.25rem;
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  border-left: 1px solid var(--glass-border);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: background var(--transition-fast);
+}
+
+.ticker-cta:hover {
+  background: rgba(201, 168, 76, 0.08);
+}
