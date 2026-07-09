@@ -29,7 +29,8 @@ export default function ContactPage() {
 
 
       <section className="section bg-navy-mid">
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '4rem', alignItems: 'flex-start' }}>
+        <div className="container grid-2-col" style={{ alignItems: 'flex-start' }}>
+
           {/* Info cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <div className="section-label">Connect</div>

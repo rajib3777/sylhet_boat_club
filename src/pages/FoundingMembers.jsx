@@ -14,7 +14,7 @@ export default function FoundingMembers() {
       <PageHero
         title="Founding Members"
         subtitle={`The visionaries and pioneers who established ${clubInfo.name} in ${clubInfo.established}.`}
-        bgImage="https://images.unsplash.com/photo-1537519646099-335112f03225?w=1920&q=80"
+        bgImage="/assets/images/renders/lounge1.jpg"
       />
 
       <section className="section bg-navy-mid">

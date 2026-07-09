@@ -85,7 +85,8 @@
   margin-top: 2rem;
 }
 
-/* Responsive Media Queries */
+/* === RESPONSIVE BREAKPOINTS === */
+
 @media (max-width: 1024px) {
   .about-story-grid {
     grid-template-columns: 1fr;
@@ -104,6 +105,12 @@
   .about-plan-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* Hide the floating "3km" badge on tablet to avoid overlap */
+  .about-story-grid > div:last-child > .glass-card {
+    position: static !important;
+    margin-top: 1.5rem;
+    max-width: 100% !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -119,10 +126,14 @@
   .about-timeline-card {
     width: calc(100% - 50px);
     margin-left: auto;
+    padding: 1.5rem;
   }
 }
 
 @media (max-width: 600px) {
+  .about-story-grid {
+    gap: 2rem;
+  }
   .about-pillars-grid {
     grid-template-columns: 1fr;
   }
@@ -131,5 +142,8 @@
   }
   .about-plan-grid {
     grid-template-columns: 1fr;
+  }
+  .about-timeline-card {
+    padding: 1.25rem;
   }
 }

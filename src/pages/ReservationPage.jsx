@@ -24,15 +24,15 @@ export default function ReservationPage() {
       <PageHero
         title="Reservations & Bookings"
         subtitle="Book private dining, sports courts, banquet halls, or boat riding slots."
-        bgImage="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80"
+        bgImage="/assets/images/renders/lobby1.jpg"
       />
 
       <section className="section bg-navy-mid">
         <div className="container" style={{ maxWidth: '700px', margin: '0 auto' }}>
-          <div className="glass-card" style={{ padding: '3.5rem' }}>
+          <div className="glass-card" style={{ padding: '2rem 1.5rem' }}>
             <h3 className="heading-md" style={{ marginBottom: '2rem', textAlign: 'center' }}>Reserve an Amenity</h3>
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+              <div className="form-grid-2">
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   <label className="label" style={{ fontSize: '0.65rem' }}>Full Name</label>
                   <input
@@ -51,7 +51,7 @@ export default function ReservationPage() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+              <div className="form-grid-2">
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   <label className="label" style={{ fontSize: '0.65rem' }}>Phone Number</label>
                   <input
@@ -80,7 +80,7 @@ export default function ReservationPage() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
+              <div className="form-grid-3">
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   <label className="label" style={{ fontSize: '0.65rem' }}>Date</label>
                   <input

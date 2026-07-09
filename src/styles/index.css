@@ -580,8 +580,127 @@ ul, ol {
   }
 }
 
+/* ============================================================
+   RESPONSIVE GALLERY SYSTEM
+   ============================================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  grid-auto-rows: 240px;
+}
+
+.gallery-card-item {
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition-base);
+}
+
+.gallery-card-item.featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+  .gallery-card-item.featured {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE FORM GRIDS
+   ============================================================ */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .form-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
 ::selection {
   background: var(--gold-primary);
   color: var(--navy-deep);
 }
 
+/* ============================================================
+   GLOBAL MOBILE OVERRIDES
+   ============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --container-px: 1.25rem;
+    --section-py: 5rem;
+    --section-py-sm: 3rem;
+  }
+
+  /* Reduce glass-card inner padding on very small screens */
+  .glass-card {
+    border-radius: var(--radius-lg) !important;
+  }
+
+  /* Page Hero — reduce min-height on phones */
+  .page-hero {
+    min-height: 300px !important;
+    height: 45dvh !important;
+  }
+
+  .page-hero-content {
+    padding-top: 5rem !important;
+  }
+
+  /* Heading sizes */
+  .heading-xl {
+    font-size: clamp(1.8rem, 8vw, 3rem) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-px: 1rem;
+    --section-py: 4rem;
+  }
+
+  /* Tighter section labels */
+  .section-label {
+    font-size: 0.55rem !important;
+  }
+
+  /* Prevent btn from overflowing */
+  .btn {
+    padding: 0.875rem 1.5rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  /* Glass card form padding */
+  .glass-card[style*="padding: 3"] {
+    padding: 1.5rem !important;
+  }
+}

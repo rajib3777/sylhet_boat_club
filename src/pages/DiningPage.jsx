@@ -19,7 +19,7 @@ export default function DiningPage() {
       <PageHero
         title="Culinary Excellence"
         subtitle="Savor a range of local & international cuisines curated by our world-class culinary chefs."
-        bgImage="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80"
+        bgImage="/assets/images/renders/restaurant.jpg"
       />
 
       {/* Menu list */}
@@ -29,7 +29,7 @@ export default function DiningPage() {
           <h2 className="heading-xl text-center text-gradient-gold" style={{ marginBottom: '4rem' }}>Our Restaurant Menu</h2>
 
           {/* Menu Categories */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '4rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
             {menuCategories.map(cat => (
               <button
                 key={cat}
@@ -46,19 +46,20 @@ export default function DiningPage() {
             ))}
           </div>
 
-          {/* Menu Grid */}
+          {/* Menu Grid — responsive 2-col on desktop, 1-col on mobile */}
           <div className="grid-2-col" style={{ maxWidth: '900px', margin: '0 auto' }}>
-
             {filtered.map((item) => (
-              <div key={item.id} className="glass-card" style={{ padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', flex: 1 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <h3 className="heading-md" style={{ fontSize: '1.15rem' }}>{item.name}</h3>
-                    {item.tag && <span className="label text-gold" style={{ fontSize: '0.55rem', background: 'rgba(201, 168, 76, 0.1)', padding: '0.2rem 0.6rem', borderRadius: '99px' }}>{item.tag}</span>}
+              <div key={item.id} className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem' }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.35rem' }}>
+                      <h3 className="heading-md" style={{ fontSize: '1.05rem' }}>{item.name}</h3>
+                      {item.tag && <span className="label text-gold" style={{ fontSize: '0.55rem', background: 'rgba(201, 168, 76, 0.1)', padding: '0.2rem 0.6rem', borderRadius: '99px' }}>{item.tag}</span>}
+                    </div>
+                    <p className="body-sm text-muted">{item.description}</p>
                   </div>
-                  <p className="body-sm text-muted">{item.description}</p>
+                  <div className="heading-md text-gradient-gold" style={{ fontSize: '1.1rem', flexShrink: 0 }}>{item.price}</div>
                 </div>
-                <div className="heading-md text-gradient-gold" style={{ fontSize: '1.25rem', marginLeft: '2rem' }}>{item.price}</div>
               </div>
             ))}
           </div>

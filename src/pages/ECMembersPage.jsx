@@ -43,7 +43,8 @@ export default function ECMembersPage() {
           <div className="section-label" style={{ justifyContent: 'center' }}>Board Members</div>
           <h2 className="heading-xl text-center text-gradient-gold" style={{ marginBottom: '4rem' }}>The Executive Committee</h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+          <div className="grid-3-col">
+
             {others.map((member) => {
               const isPresident = member.role === 'President'
               return (

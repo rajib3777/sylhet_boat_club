@@ -32,11 +32,12 @@ export default function MembershipPage() {
       <PageHero
         title="Club Membership"
         subtitle={`Step into a world of privileges, sporting spirit and prestige at ${clubInfo.name}.`}
-        bgImage="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920&q=80"
+        bgImage="/assets/images/renders/restaurant.jpg"
       />
 
       <section className="section bg-navy-mid">
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'flex-start' }}>
+        <div className="container grid-2-col" style={{ alignItems: 'flex-start' }}>
+
           {/* Info */}
           <div>
             <div className="section-label">Privileges</div>
@@ -61,7 +62,8 @@ export default function MembershipPage() {
           </div>
 
           {/* Form */}
-          <div className="glass-card" style={{ padding: '3rem' }}>
+          <div className="glass-card" style={{ padding: 'clamp(1.5rem, 4vw, 3rem)' }}>
+
             <h3 className="heading-md" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>Application Form — Step {step} of 3</h3>
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {step === 1 && (

@@ -21,7 +21,7 @@ export default function EventsPage() {
       <PageHero
         title="Events & Tournaments"
         subtitle="Stay updated with our upcoming championships, gala nights, and member events."
-        bgImage="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&q=80"
+        bgImage="/assets/images/renders/lobby2.jpg"
       />
 
       <section className="section bg-navy-mid">
@@ -45,7 +45,8 @@ export default function EventsPage() {
           </div>
 
           {/* Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+          <div className="grid-3-col">
+
             {filtered.map((event) => (
               <div key={event.id} className="glass-card" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ aspectRatio: '16/10', overflow: 'hidden', position: 'relative' }}>

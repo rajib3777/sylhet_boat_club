@@ -13,7 +13,7 @@ export default function AffiliatedClubsPage() {
       <PageHero
         title="Affiliated Clubs"
         subtitle="Enjoy member access and benefits at our prestigious partner clubs across the country."
-        bgImage="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80"
+        bgImage="/assets/images/renders/exterior1.jpg"
       />
 
       <section className="section bg-navy-mid">
@@ -22,7 +22,8 @@ export default function AffiliatedClubsPage() {
           <h2 className="heading-xl text-center text-gradient-gold" style={{ marginBottom: '4rem' }}>Our Affiliate Networks</h2>
 
           {/* Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem' }}>
+          <div className="grid-4-col">
+
             {affiliatedClubs.map((club) => (
               <div key={club.id} className="glass-card" style={{ padding: '2.5rem 1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
                 <span style={{ fontSize: '3rem', filter: 'drop-shadow(0 0 10px rgba(201,168,76,0.3))' }}>{club.icon}</span>

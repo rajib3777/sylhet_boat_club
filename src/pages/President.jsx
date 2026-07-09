@@ -18,7 +18,7 @@ export default function President() {
 
 
       <section className="section bg-white" style={{ color: '#000' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '4rem' }}>
+        <div className="container grid-2-col">
           <div>
             <div style={{ borderRadius: '2rem', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }}>
               <img src={presidentMessage.photo} alt={`President ${presidentMessage.name}`} style={{ width: '100%', display: 'block' }} />

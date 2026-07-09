@@ -25,8 +25,9 @@ export default function NoticePage() {
       <PageHero
         title="Official Notices"
         subtitle="Access notices, circulars, and updates regarding club operations and tournaments."
-        bgImage="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=1920&q=80"
+        bgImage="/assets/images/renders/lobby2.jpg"
       />
+
 
       <section className="section bg-navy-mid">
         <div className="container">
