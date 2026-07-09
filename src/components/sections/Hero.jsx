@@ -33,28 +33,21 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
-      {/* Background Slider */}
+      {/* Background Video */}
       <div className="hero-slider">
-        <Swiper
-          modules={[Autoplay, EffectFade, Pagination]}
-          effect="fade"
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+        <video
+          className="hero-bg-video"
+          src="/assets/video/club-film.mp4"
+          autoPlay
+          muted
           loop
-          speed={1200}
-          pagination={{ clickable: true, el: '.hero-pagination' }}
-          className="hero-swiper"
-        >
-          {slides.map(slide => (
-            <SwiperSlide key={slide.id}>
-              <div className="hero-slide">
-                <img src={slide.image} alt={slide.alt} loading={slide.id === 1 ? 'eager' : 'lazy'} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          playsInline
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
         <div className="hero-overlay" />
         <div className="hero-overlay-gradient" />
       </div>
+
 
       {/* Particles */}
       <div className="hero-particles">

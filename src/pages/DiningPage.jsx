@@ -47,7 +47,8 @@ export default function DiningPage() {
           </div>
 
           {/* Menu Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', maxWidth: '900px', margin: '0 auto' }}>
+          <div className="grid-2-col" style={{ maxWidth: '900px', margin: '0 auto' }}>
+
             {filtered.map((item) => (
               <div key={item.id} className="glass-card" style={{ padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', flex: 1 }}>

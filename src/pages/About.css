@@ -1,0 +1,135 @@
+/* ============================================================
+   ABOUT PAGE STYLES
+   ============================================================ */
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.about-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.about-timeline-wrap {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(201, 168, 76, 0.2);
+  transform: translateX(-50%);
+}
+
+.about-timeline-item {
+  display: flex;
+  position: relative;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.about-timeline-item.even {
+  justify-content: flex-start;
+}
+
+.about-timeline-item.odd {
+  justify-content: flex-end;
+}
+
+.about-timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  border: 3px solid #010812;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 12px rgba(201, 168, 76, 0.5);
+}
+
+.about-timeline-card {
+  width: 44%;
+  padding: 2rem;
+}
+
+.about-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .about-story-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-plan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-timeline-line {
+    left: 20px;
+  }
+  .about-timeline-dot {
+    left: 20px;
+  }
+  .about-timeline-item {
+    justify-content: flex-end !important;
+  }
+  .about-timeline-card {
+    width: calc(100% - 50px);
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-plan-grid {
+    grid-template-columns: 1fr;
+  }
+}

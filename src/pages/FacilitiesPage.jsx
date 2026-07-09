@@ -46,7 +46,8 @@ export default function FacilitiesPage() {
           </div>
 
           {/* Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2.5rem 2rem' }}>
+          <div className="grid-3-col">
+
             {filtered.map((facility) => (
               <div key={facility.id} className="glass-card" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ aspectRatio: '16/10', overflow: 'hidden', position: 'relative' }}>

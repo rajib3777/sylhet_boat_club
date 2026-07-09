@@ -2,11 +2,12 @@ import { motion } from 'framer-motion'
 import PageHero from '../components/ui/PageHero'
 import { Anchor, Compass, Heart, Award, Shield, Users, Leaf, Globe, Star } from 'lucide-react'
 import { clubInfo, ourStory, mission, vision, coreValues } from '../data/appData'
+import './About.css'
 
 const historyTimeline = [
   { year: '2026', title: 'The Vision & Birth', desc: 'Sylhet Boat Club Limited was conceived on the banks of the Sari Gowain River — a landmark institution for Sylhet\'s business leaders, families, and NRBs.' },
   { year: 'Phase 1', title: 'Elite Facilities Launch', desc: 'Opening of the infinity swimming pool, snooker, billiards, card room, premium court sports (tennis, basketball, badminton), and the signature riverside dining.' },
-  { year: 'Phase 2', title: '20 Luxury Suites', desc: 'Launch of 20 ultra-luxury, fully-equipped rooms reserved exclusively for club members and distinguished guests from around the world.' },
+  { year: 'Phase 2', title: '20 Luxury Suites', desc: 'Launch of 20 luxury rooms reserved exclusively for club members and distinguished guests from around the world.' },
   { year: 'Phase 3', title: 'Eco-Tourism Gateway', desc: 'Establishment of the premier gateway connecting members to Ratargul, Lalakhal, Sada Pathor, and Jaflong via scenic Sari Gowain River cruises.' },
 ]
 
@@ -37,29 +38,31 @@ export default function About() {
 
       {/* Our Story — Real PDF Content */}
       <section className="section bg-navy-mid">
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
-          <div>
-            <div className="section-label">Our Story</div>
-            <h2 className="heading-xl text-gradient-gold" style={{ margin: '1rem 0 1.5rem' }}>
-              Where Nature Inspires Connections
-            </h2>
-            <p className="body-md text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.85 }}>
-              There are very few places in the world where nature, culture, and opportunity come together as effortlessly as Sylhet.
-            </p>
-            <p className="body-md text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.85 }}>
-              Blessed with emerald tea gardens, crystal-clear rivers, rolling hills, and the enchanting haors, Sylhet has long been known as Bangladesh's premier tourism destination — the cherished homecoming of millions of Non-Resident Bangladeshis, a thriving center of commerce, and a region celebrated for its warmth, hospitality, and timeless traditions.
-            </p>
-            <p className="body-md text-muted" style={{ lineHeight: 1.85 }}>
-              From this remarkable landscape, <strong style={{ color: 'var(--gold-primary)' }}>Sylhet Boat Club Limited</strong> was born — nestled on the peaceful banks of the majestic Sari Gowain River, only 3 kilometers from Sylhet International Airport.
-            </p>
-          </div>
-          <div style={{ position: 'relative' }}>
-            <div className="gold-border-wrapper" style={{ borderRadius: '2rem', overflow: 'hidden' }}>
-              <img src="/assets/images/renders/exterior1.jpg" alt="Sylhet Boat Club — Riverside" style={{ width: '100%', display: 'block' }} />
+        <div className="container">
+          <div className="about-story-grid">
+            <div>
+              <div className="section-label">Our Story</div>
+              <h2 className="heading-xl text-gradient-gold" style={{ margin: '1rem 0 1.5rem' }}>
+                Where Nature Inspires Connections
+              </h2>
+              <p className="body-md text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.85 }}>
+                There are very few places in the world where nature, culture, and opportunity come together as effortlessly as Sylhet.
+              </p>
+              <p className="body-md text-muted" style={{ marginBottom: '1.5rem', lineHeight: 1.85 }}>
+                Blessed with emerald tea gardens, crystal-clear rivers, rolling hills, and the enchanting haors, Sylhet has long been known as Bangladesh\'s premier tourism destination — the cherished homecoming of millions of Non-Resident Bangladeshis, a thriving center of commerce, and a region celebrated for its warmth, hospitality, and traditions.
+              </p>
+              <p className="body-md text-muted" style={{ lineHeight: 1.85 }}>
+                From this remarkable landscape, <strong style={{ color: 'var(--gold-primary)' }}>Sylhet Boat Club Limited</strong> was born — nestled on the peaceful banks of the Sari Gowain River, only 3 kilometers from Sylhet International Airport.
+              </p>
             </div>
-            <div className="glass-card" style={{ position: 'absolute', bottom: '-2rem', left: '-2rem', padding: '1.5rem 2rem', maxWidth: '220px' }}>
-              <div style={{ fontSize: '2rem', fontFamily: 'var(--font-display)', color: 'var(--gold-primary)', fontWeight: 700 }}>3 km</div>
-              <div style={{ fontSize: '0.7rem', color: 'var(--white-70)', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '0.25rem' }}>from Sylhet Airport</div>
+            <div style={{ position: 'relative' }}>
+              <div className="gold-border-wrapper" style={{ borderRadius: '2rem', overflow: 'hidden' }}>
+                <img src="/assets/images/renders/exterior1.jpg" alt="Sylhet Boat Club — Riverside" style={{ width: '100%', display: 'block' }} />
+              </div>
+              <div className="glass-card" style={{ position: 'absolute', bottom: '-2rem', left: '-2rem', padding: '1.5rem 2rem', maxWidth: '220px' }}>
+                <div style={{ fontSize: '2rem', fontFamily: 'var(--font-display)', color: 'var(--gold-primary)', fontWeight: 700 }}>3 km</div>
+                <div style={{ fontSize: '0.7rem', color: 'var(--white-70)', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '0.25rem' }}>from Sylhet Airport</div>
+              </div>
             </div>
           </div>
         </div>
@@ -93,16 +96,12 @@ export default function About() {
         <div className="container">
           <div className="section-label" style={{ justifyContent: 'center' }}>Our Journey</div>
           <h2 className="heading-xl text-center text-gradient-gold" style={{ marginBottom: '4rem' }}>Development Phases</h2>
-          <div style={{ position: 'relative', maxWidth: '800px', margin: '0 auto' }}>
-            <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '2px', background: 'rgba(201, 168, 76, 0.2)', transform: 'translateX(-50%)' }} />
+          <div className="about-timeline-wrap">
+            <div className="about-timeline-line" />
             {historyTimeline.map((item, index) => (
-              <div key={index} style={{ display: 'flex', justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end', position: 'relative', marginBottom: '3rem', width: '100%' }}>
-                <div style={{
-                  position: 'absolute', left: '50%', top: '10px', width: '14px', height: '14px', borderRadius: '50%',
-                  background: '#c9a84c', border: '3px solid #010812', transform: 'translateX(-50%)', zIndex: 2,
-                  boxShadow: '0 0 12px rgba(201,168,76,0.5)'
-                }} />
-                <div className="glass-card" style={{ width: '44%', padding: '2rem' }}>
+              <div key={index} className={`about-timeline-item ${index % 2 === 0 ? 'even' : 'odd'}`}>
+                <div className="about-timeline-dot" />
+                <div className="glass-card about-timeline-card">
                   <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', color: 'var(--gold-primary)', fontWeight: 700, display: 'block', marginBottom: '0.5rem' }}>{item.year}</span>
                   <h3 className="heading-md" style={{ marginBottom: '0.75rem' }}>{item.title}</h3>
                   <p className="body-sm text-muted">{item.desc}</p>
@@ -118,14 +117,14 @@ export default function About() {
         <div className="container">
           <div className="section-label" style={{ justifyContent: 'center' }}>Core Pillars</div>
           <h2 className="heading-xl text-center text-gradient-gold" style={{ marginBottom: '4rem' }}>Vision & Mission</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2.5rem', marginBottom: '4rem' }}>
+          <div className="about-vision-grid">
             <div className="glass-card" style={{ padding: '3rem 2.5rem' }}>
               <div style={{ width: '52px', height: '52px', borderRadius: '50%', background: 'rgba(201,168,76,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c9a84c', marginBottom: '1.5rem' }}>
                 <Compass size={24} />
               </div>
               <h3 className="heading-md" style={{ marginBottom: '1rem' }}>Our Vision</h3>
               <p className="body-sm text-muted" style={{ lineHeight: 1.8 }}>
-                To become South Asia's most admired waterfront private club and the premier gateway to Sylhet's natural wonders, recognized internationally for excellence in hospitality, recreation, sustainability, and community leadership.
+                To become South Asia\'s most admired waterfront private club and the premier gateway to Sylhet\'s natural wonders, recognized internationally for excellence in hospitality, recreation, sustainability, and community leadership.
               </p>
               <ul style={{ marginTop: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingLeft: '1.25rem' }}>
                 {['The preferred destination for NRBs visiting Bangladesh', 'A prestigious meeting place for business & diplomacy', 'A benchmark for sustainable waterfront development', 'A legacy institution future generations call their own'].map(item => (
@@ -139,10 +138,10 @@ export default function About() {
               </div>
               <h3 className="heading-md" style={{ marginBottom: '1rem' }}>Our Mission</h3>
               <p className="body-sm text-muted" style={{ lineHeight: 1.8 }}>
-                To create Bangladesh's finest riverside lifestyle destination by bringing together business leaders, professionals, families, and global citizens in an environment that celebrates nature, hospitality, wellness, recreation, and meaningful human connections.
+                To create Bangladesh\'s finest riverside lifestyle destination by bringing together business leaders, professionals, families, and global citizens in an environment that celebrates nature, hospitality, wellness, recreation, and connections.
               </p>
               <ul style={{ marginTop: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingLeft: '1.25rem' }}>
-                {['Promoting eco-friendly tourism & responsible development', 'Providing exceptional leisure, sports & hospitality', 'Building a vibrant community for networking & lifelong friendships', 'Showcasing the natural beauty of Sylhet to the world'].map(item => (
+                {['Promoting eco-friendly tourism & responsible development', 'Providing exceptional leisure, sports & hospitality', 'Building a vibrant community for networking & friendships', 'Showcasing the natural beauty of Sylhet to the world'].map(item => (
                   <li key={item} style={{ color: 'var(--white-70)', fontSize: '0.85rem', lineHeight: 1.6 }}>{item}</li>
                 ))}
               </ul>
@@ -156,7 +155,7 @@ export default function About() {
         <div className="container">
           <div className="section-label" style={{ justifyContent: 'center' }}>Areas of Importance</div>
           <h2 className="heading-xl text-center text-gradient-gold" style={{ marginBottom: '4rem' }}>Six Pillars of SBCL</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+          <div className="about-pillars-grid">
             {pillars.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="glass-card" style={{ padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(201,168,76,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c9a84c' }}>
@@ -175,7 +174,7 @@ export default function About() {
         <div className="container">
           <div className="section-label" style={{ justifyContent: 'center' }}>What We Stand For</div>
           <h2 className="heading-xl text-center text-gradient-gold" style={{ marginBottom: '4rem' }}>Core Values</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+          <div className="about-values-grid">
             {coreValues.map(({ title, desc }) => {
               const Icon = valueIcons[title] || Star
               return (
@@ -204,7 +203,7 @@ export default function About() {
           <div className="gold-border-wrapper" style={{ borderRadius: '1.5rem', overflow: 'hidden', marginBottom: '2rem' }}>
             <img src="/assets/images/floorplan_page2.png" alt="SBCL Site Plan" style={{ width: '100%', display: 'block' }} />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginTop: '2rem' }}>
+          <div className="about-plan-grid">
             {[
               { label: 'Ground Floor', img: '/assets/images/floorplan_page3.png', desc: 'Main entrance, pool, family lounge & restaurant' },
               { label: 'First Floor', img: '/assets/images/floorplan_page4.png', desc: 'Banquet hall, club offices & special lounge' },

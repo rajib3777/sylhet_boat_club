@@ -22,7 +22,8 @@ export default function FoundingMembers() {
           <div className="section-label" style={{ justifyContent: 'center' }}>Visionaries</div>
           <h2 className="heading-xl text-center text-gradient-gold" style={{ marginBottom: '4rem' }}>Our Founders</h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '3rem 2rem' }}>
+          <div className="grid-3-col">
+
             {foundingMembers.map((member) => (
               <div key={member.id} className="glass-card" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ aspectRatio: '4/5', overflow: 'hidden', position: 'relative' }}>
