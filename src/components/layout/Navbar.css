@@ -431,24 +431,59 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .navbar-desktop {
-    display: none;
+    display: none !important;
   }
 
   .mobile-toggle {
-    display: flex;
+    display: flex !important;
   }
 
   .navbar-btn {
-    display: none;
+    display: none !important;
+  }
+
+  .logo-img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .logo-name {
+    font-size: 0.95rem !important;
+  }
+
+  .logo-tagline {
+    font-size: 0.55rem !important;
+    letter-spacing: 0.15em !important;
   }
 }
 
 @media (max-width: 768px) {
   .navbar-topbar {
-    display: none;
+    display: none !important;
   }
 
   .navbar {
-    top: 0;
+    top: 0 !important;
   }
 }
+
+@media (max-width: 480px) {
+  .logo-img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .logo-name {
+    font-size: 0.85rem !important;
+  }
+
+  .logo-tagline {
+    font-size: 0.48rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .navbar-logo {
+    gap: 0.5rem !important;
+  }
+}
+

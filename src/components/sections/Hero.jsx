@@ -18,11 +18,12 @@ const slides = [
 ]
 
 
-const words = ['Luxury', 'Nature', 'Leisure', 'Prestige']
+const words = ['Prestige', 'Luxury', 'Leisure', 'Elegance']
 
 export default function Hero() {
   const [wordIdx, setWordIdx] = useState(0)
   const [showVideo, setShowVideo] = useState(false)
+  const videoRef = useRef(null)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,11 +32,22 @@ export default function Hero() {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true
+      videoRef.current.muted = true
+      videoRef.current.play().catch(err => {
+        console.log("Autoplay blocked or failed:", err)
+      })
+    }
+  }, [])
+
   return (
     <section id="home" className="hero">
       {/* Background Video */}
       <div className="hero-slider">
         <video
+          ref={videoRef}
           className="hero-bg-video"
           src="/assets/video/club-film.mp4"
           autoPlay
@@ -47,6 +59,7 @@ export default function Hero() {
         <div className="hero-overlay" />
         <div className="hero-overlay-gradient" />
       </div>
+
 
 
       {/* Particles */}
@@ -89,7 +102,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.7 }}
             >
-              Where Nature
+              A Legacy of
             </motion.h1>
             <motion.div
               className="hero-word-cycle"
